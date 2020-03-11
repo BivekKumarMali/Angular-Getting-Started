@@ -5,16 +5,16 @@
     <form #form="ngForm" ngNativeValidate>
 
         <label for="Name">First Name</label>
-        <input id="Name" name="Name" class="form-control" [(ngModel)]=employee.First_Name required><br>
+        <input id="Name" name="Name" type="text" class="form-control" [(ngModel)]=employee.First_Name required><br>
         <label for="lname">Last Name</label>
-        <input id="lname" name="lname" class="form-control" [(ngModel)]="employee.Last_Name" required><br>
+        <input id="lname" name="lname" type="text" class="form-control" [(ngModel)]="employee.Last_Name" required><br>
 
 
         <label for="Email">Email:</label><br>
         <input type="email" id="Email" class="form-control" name="Email" [(ngModel)]=employee.Email required><br>
 
         <label for="contact">Contact</label>
-        <input id="contact" name="contact" minlength="10" maxlength="10" class="form-control"
+        <input id="contact" name="contact" type="number" minlength="10" maxlength="10" class="form-control"
             [(ngModel)]="employee.Contact" required><br>
 
         <label for="address">Address</label>
@@ -22,7 +22,7 @@
         </textarea><br>
 
         <label for="username">Username</label>
-        <input id="username" name="username" class="form-control" [(ngModel)]="employee.Username" required><br>
+        <input id="username" name="username" type="text" class="form-control" [(ngModel)]="employee.Username" required><br>
 
         <label for="password">Password</label>
         <input id="password" name="password" type="password" class="form-control" [(ngModel)]="employee.Password"
