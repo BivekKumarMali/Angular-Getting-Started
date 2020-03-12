@@ -52,7 +52,7 @@
             </select>
             <label>Coding Languages:</label>
             <div *ngFor="let l of default_language">
-                <input type="checkbox" name="default_language" checked (cdhange)="onChange(l, $event.target.checked)" />
+                <input type="checkbox" name="default_language" checked (change)="onChange(l, $event.target.checked)" />
                 {{ l }}
             </div>
             <div *ngFor="let n of language">
