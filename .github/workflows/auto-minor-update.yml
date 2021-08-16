@@ -3,13 +3,19 @@ name: Auto-merge
 on:
   pull_request:
     branches: [ master ]
+  push:
+    branches: [ master ]
 
 jobs:
-  auto-merge:
-    runs-on: ubuntu-latest
+  abuild:
+    runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: ahmadnassri/action-dependabot-auto-merge@v2
+      - name: Merge
+        uses: buildsville/simple-merge@v1
+        id: merge
         with:
-          target: minor
-          github-token: ${{ secrets.mytoken }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          method: 'merge'
+          labels: '[ "dependencies" ]'
+          title: 'Auto Merge'
+          message: 'Merge dependabot dependencies'
