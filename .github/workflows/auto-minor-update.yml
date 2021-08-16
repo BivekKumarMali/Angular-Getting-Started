@@ -17,11 +17,3 @@ jobs:
           labels: '[ "dependencies" ]'
           title: "Auto Merge"
           message: "Merge dependabot dependencies"
-      - name: Auto Merge
-        uses: buildsville/simple-merge@v1
-        id: merge
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          method: "manual auto-merge"
-          labels: '[ "auto-merge" ]'
-          title: "Auto Merge"
