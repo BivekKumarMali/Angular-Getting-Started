@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "asssginment2": {
+    "Angular-Getting-Started": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/asssginment2",
+            "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "asssginment2:build"
+            "browserTarget": "Angular-Getting-Started:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "asssginment2:build:production"
+              "browserTarget": "Angular-Getting-Started:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "asssginment2:build"
+            "browserTarget": "Angular-Getting-Started:build"
           }
         },
         "test": {
@@ -110,18 +110,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "asssginment2:serve"
+            "devServerTarget": "Angular-Getting-Started:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "asssginment2:serve:production"
+              "devServerTarget": "Angular-Getting-Started:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "asssginment2",
+  "defaultProject": "Angular-Getting-Started",
   "cli": {
     "analytics": "1a92ba01-1ddb-4801-8529-fc2eddfa1d89"
   }
