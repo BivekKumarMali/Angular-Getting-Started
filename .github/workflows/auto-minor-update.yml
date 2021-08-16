@@ -2,18 +2,26 @@ name: Auto-merge
 
 on:
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
-  abuild:
+  auto-merge:
     runs-on: windows-latest
     steps:
-      - name: Merge
+      - name: Dependency Merge
         uses: buildsville/simple-merge@v1
         id: merge
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          method: 'merge'
-          labels: '[ "dependencies", "auto-merge" ]'
-          title: 'Auto Merge'
-          message: 'Merge dependabot dependencies'
+          method: "dependency merge"
+          labels: '[ "dependencies" ]'
+          title: "Auto Merge"
+          message: "Merge dependabot dependencies"
+      - name: Auto Merge
+        uses: buildsville/simple-merge@v1
+        id: merge
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          method: "manual auto-merge"
+          labels: '[ "auto-merge" ]'
+          title: "Auto Merge"
