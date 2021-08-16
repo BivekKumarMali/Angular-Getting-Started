@@ -15,7 +15,7 @@ jobs:
         id: merge
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          method: 'merge'
+          method: 'dependency merge'
           labels: '[ "dependencies" ]'
           title: 'Auto Merge'
           message: 'Merge dependabot dependencies'
@@ -24,6 +24,6 @@ jobs:
         id: merge
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          method: 'merge'
+          method: 'manual auto-merge'
           labels: '[ "auto-merge" ]'
           title: 'Auto Merge'
